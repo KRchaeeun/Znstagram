@@ -1,9 +1,10 @@
 # Znstagram  
 ## Members  
 1. 김태완 - [github] [rlaxodhks770@naver.com](https://github.com/Manwol770/Manwol770) 
-2. 이채은 - [github] [cheeun0903@gmail.com](https://github.com/KRchaeeun/Profile)  
-3. 임지현 - [github]  
-4. 차현철 - [github] [ckguscjf03@gmail.com](https://github.com/chahyeoncheol)
+2. 김보경 - [github] [cheeun0903@gmail.com](https://github.com/KRchaeeun/Profile) 
+3. 이채은 - [github] [cheeun0903@gmail.com](https://github.com/KRchaeeun/Profile)  
+4. 임지현 - [github] [rapsparrow99@naver.com](https://github.com/aishahansten)
+5. 차현철 - [github] [ckguscjf03@gmail.com](https://github.com/chahyeoncheol)
   
   
 ## 우리의 여정  
