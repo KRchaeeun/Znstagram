@@ -6,6 +6,16 @@
 4. 임지현 - [github]
 5. 차현철 - [github] [chahyeoncheol](https://github.com/chahyeoncheol)
   
+## Commit Rules  
+- [INIT]: 프로젝트 시작 시 초기 설정
+- [CREATE]: 새로 만든 파일  
+- [ADD]: 새로운 코드/함수 생성
+- [UPDATE]: 기존 코드에서 추가
+- \[FIX]: 수정  
+- [REMOVE]: 기존 코드/함수 제거  
+- [MERGE]: 브랜치 병합  
+- [STYLE]: 코드 스타일 변경 (포맷팅, 들여쓰기, 세미콜론 추가/제거 등)  
+- [DOCS]: 문서 변경 (README, 주석 등)
   
 ## 우리의 여정  
 여기는 2023.10.23 ~ (예정) 2024.02.29 까지의 기록입니다.
