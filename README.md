@@ -1,9 +1,9 @@
 # Znstagram  
 ## Members  
-1. 김태완 - [github] [Manwol770](https://github.com/Manwol770/Manwol770) 
+1. 김태완 - [github] [Manwol770](https://github.com/Manwol770) 
 2. 김보경 - [github] [aishahansten](https://github.com/aishahansten)
-3. 이채은 - [github] [KRchaeeun](https://github.com/KRchaeeun/Profile)  
-4. 임지현 - [github]
+3. 이채은 - [github] [KRchaeeun](https://github.com/KRchaeeun)  
+4. 임지현 - [github] [ljh2375](https://github.com/ljh2375)
 5. 차현철 - [github] [chahyeoncheol](https://github.com/chahyeoncheol)
   
 ## Commit Rules  
