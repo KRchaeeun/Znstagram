@@ -19,6 +19,7 @@
   
 ## 우리의 여정  
 여기는 2023.10.23 ~ (예정) 2024.02.29 까지의 기록입니다.
+
 ### 2023.10.23 ⛵
 - Purpose of Meeting: [프로젝트 목적] 인스타그램을 기반으로 구성원들이 희망하는 기능을 추가로 구현하는 웹사이트 제작
 - Work to Do: 웹사이트에 추가할 기능 조사해오기
@@ -30,3 +31,30 @@
 - Work to Do: 웹사이트 메인 페이지로 갈 수 있도록 기본 기능 구현 
 - Communication: Personally Meet
 - Deadline: 10/30    
+
+
+### 2023.11.25 ⛵
+- Purpose of Meeting: [프로젝트 기술 스택] Backend - Django, Frontend - React 사용
+- Work to Do: 웹사이트에 추가할 기능 참고자료 조사, React 공부
+- Communication: Discord  
+- Deadline: 11/27    
+
+### 2023.11.27 ⛵
+- Purpose of Meeting: [구현할 기능] 기본 기능과 추가 기능 구분, 우선순위 설정
+    - 기본 기능: 회원 관리 기능(회원 가입, 로그인, 로그아웃, 회원 탈퇴, 회원 정보 수정, 소셜 로그인 등), 사진 업로드, 댓글, 대댓글, 검색 기능('#'을 사용하면 태그로 인식하고 '@'는 사용자로 인식), 팔로우/팔로잉, 좋아요, DM
+    - 추가 기능: 카카오페이 연동, 얼굴 인식 알고리즘, 사진 및 동영상 데이터 분류 알고리즘, 챗봇 기능
+- Work to Do: 웹사이트에 추가할 기능 참고자료 조사, React 공부   
+- Communication: Discord  
+- Deadline: 12/08    
+
+### 2023.12.03 ⛵
+- Purpose of Meeting: [중간점검] React 공부 중간 점검
+- Work to Do: 웹사이트에 추가할 기능 참고자료 조사, React 공부  
+- Communication: Discord  
+- Deadline: 12/08    
+
+### 2023.12.08 ⛵
+- Purpose of Meeting: [스켈레톤 코드] Backend 스켈레톤 코드 작성
+- Work to Do: 각자 맡은 기능 구현
+- Communication: Discord  
+- Deadline: 12/15     
