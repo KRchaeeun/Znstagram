@@ -46,5 +46,5 @@ class CommentLike(models.Model):
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        unique_together = ('user', 'comment')
+    class Meta: 
+        unique_together = ('user', 'comment')  # 동일 사용자가 동일 댓글에 중복 좋아요 방지
