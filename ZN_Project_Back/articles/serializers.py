@@ -9,6 +9,7 @@ class TagSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# 전체 게시글 시리얼라이져
 class ArticleListSerializer(serializers.ModelSerializer):
 
     class Meta:
