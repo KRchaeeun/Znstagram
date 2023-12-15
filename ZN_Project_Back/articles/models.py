@@ -26,7 +26,7 @@ class Article(models.Model):
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
+    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)  # 어떤 댓글이 다른 댓글에 대한 답변인지를 구조적으로 나타내는 스레드 댓글을 위한 자기 참조 외래키
     content = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
