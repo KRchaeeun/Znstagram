@@ -10,5 +10,6 @@ urlpatterns = [
     path('<int:article_pk>/comments/', views.comment_create, name='comment_create'),  # 게시글에 댓글 추가
     path('comments/<int:comment_pk>/', views.comment_update, name='comment_update'),  # 댓글 수정 및 삭제
     path('<int:article_pk>/like/', views.article_like, name='article_like'),  # 게시글에 대한 '좋아요' 기능
-    path('comments/<int:comment_pk>/like/', views.comment_like, name='comment_like'),
+    path('comments/<int:comment_pk>/like/', views.comment_like, name='comment_like'),  # 댓글에 대한 '좋아요' 기능
+
 ]
