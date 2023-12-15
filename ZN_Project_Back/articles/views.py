@@ -66,11 +66,11 @@ def comment_create(request, article_pk):
     article = get_object_or_404(Article, article_pk=article_pk)
     if request.method == 'GET':
         comments = Comment.objects.filter(article_pk=article.pk).order_by('-created_at')
-        serializer = CommentSerialzer(comments, many=True)
+        serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
       
     if request.method == 'POST':
-        serializer = CommentSerialzer(data=request.data)
+        serializer = CommentSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
