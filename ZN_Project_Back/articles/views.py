@@ -79,7 +79,7 @@ def comment_create(request, article_pk):
 # 댓글 수정 및 삭제
 @api_view(['PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
-def comment_ud(request, comment_pk):
+def comment_update(request, comment_pk):
     if not request.user.comment_set.filter(pk=comment_pk).exists():
         return Response({'message': '권한이 없습니다.'})
 
