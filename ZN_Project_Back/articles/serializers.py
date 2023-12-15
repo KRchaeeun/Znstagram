@@ -17,8 +17,8 @@ class ArticleListSerializer(serializers.ModelSerializer):
         model = Article
         fields = ('id', 'content', 'like_count')
     
-    def get_like_count(self, obj):
-        return obj.like_count()
+    def get_like_count(self, obj):  # 게시글 모델의 인스턴스에 대해 좋아요 개수를 계산하여 반환
+        return obj.like_count()  
 
 
 class CommentSerialzer(serializers.ModelSerializer):
