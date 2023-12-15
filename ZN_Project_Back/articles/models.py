@@ -25,6 +25,9 @@ class Article(models.Model):
     # 2. Custom ImageField
     # 3. 저장 시점에서 이미지 처리
     # 4. django-imagekit과 같은 서드 파티 라이브러리 사용
+
+    def like_count(self):
+        return self.articlelike_set.count()
     
 
 class Comment(models.Model):
