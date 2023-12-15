@@ -65,7 +65,7 @@ def article_detail(request, article_pk):
 def comment_create(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)  # 'article_pk=article_pk'를 'pk=article_pk'로 수정
     if request.method == 'GET':
-        comments = Comment.objects.filter(article_pk=article.pk).order_by('-created_at')
+        comments = Comment.objects.filter(article=article).order_by('-created_at') 
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
       
