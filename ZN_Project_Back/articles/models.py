@@ -58,3 +58,22 @@ class CommentLike(models.Model):
 
     class Meta: 
         unique_together = ('user', 'comment')  # 동일 사용자가 동일 댓글에 중복 좋아요 방지
+
+
+class Report(models.Model):
+    REPORT_CHOICES = [
+        ('spam', 'Spam'),
+        ('abuse', 'Abuse'),
+        ('other', 'Other'),
+    ]
+
+    reported_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reports')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, null=True, blank=True, related_name='article_reports')
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True, blank=True, related_name='comment_reports')
+    reason = models.CharField(max_length=50, choices=REPORT_CHOICES)
+    details = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_resolved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Report by {self.reported_by} on {self.article or self.comment}"
