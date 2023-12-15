@@ -11,6 +11,7 @@ class Tag(models.Model):
         return self.article_set.all()  # 특정 태그가 있는 게시물 반환. 태그 검색 기능 구현 가능
 
 
+# 게시글 모델
 class Article(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
