@@ -35,7 +35,7 @@ class CommentSerializer(serializers.ModelSerializer):
 class ArticleSerializer(serializers.ModelSerializer):
 
     comment_set = CommentSerializer(many=True, read_only=True)
-    like_count = serializers.SerializerMethodField()
+    like_count = serializers.SerializerMethodField()  # 좋아요 수를 나타내는 필드 추가
 
     class Meta:
         model = Article
