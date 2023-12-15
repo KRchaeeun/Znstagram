@@ -39,7 +39,7 @@ class Comment(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def like_count(self):
-        return self.commentlike_set.count()
+        return self.commentlike_set.count()  # 해당 댓글에 대한 좋아요 수 계산
 
 
 class ArticleLike(models.Model):
