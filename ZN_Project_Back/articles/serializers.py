@@ -31,6 +31,7 @@ class CommentSerializer(serializers.ModelSerializer):
         read_only_fields = ('user',)
 
 
+# 단일 게시글 시리얼라이져
 class ArticleSerializer(serializers.ModelSerializer):
 
     comment_set = CommentSerializer(many=True, read_only=True)
