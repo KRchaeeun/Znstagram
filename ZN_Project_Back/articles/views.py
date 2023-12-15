@@ -59,8 +59,6 @@ def article_detail(request, article_pk):
         return Response(data=data, status=status.HTTP_204_NO_CONTENT)
 
 
-
-
 # 댓글 조회 및 생성
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
