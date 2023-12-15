@@ -44,6 +44,7 @@ class Comment(models.Model):
         return self.commentlike_set.count()  # 해당 댓글에 대한 좋아요 수 계산
 
 
+# 게시글 좋아요 모델 
 class ArticleLike(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
