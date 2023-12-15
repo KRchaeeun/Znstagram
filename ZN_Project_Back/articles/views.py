@@ -122,3 +122,15 @@ def comment_like(request, comment_pk):
     else:
         like.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# 게시글 신고 기능
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def report_article(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    serializer = ReportSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(reported_by=request.user, article=article)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
