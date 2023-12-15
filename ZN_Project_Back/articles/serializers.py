@@ -1,6 +1,13 @@
 from rest_framework import serializers
 from .models import Article, Comment, Tag, ArticleLike, CommentLike, Report
 
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = '__all__'
+
+
 class ArticleListSerializer(serializers.ModelSerializer):
 
     class Meta:
