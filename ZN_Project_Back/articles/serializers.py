@@ -22,7 +22,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
 
 
 # 댓글 시리얼라이져
-class CommentSerialzer(serializers.ModelSerializer):
+class CommentSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Comment
