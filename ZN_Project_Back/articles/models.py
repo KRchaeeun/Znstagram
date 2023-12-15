@@ -54,6 +54,7 @@ class ArticleLike(models.Model):
         unique_together = ('user', 'article')  # 동일 사용자가 동일 게시물에 중복 좋아요 방지
 
 
+# 댓글 좋아요 모델
 class CommentLike(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
