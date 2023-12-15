@@ -67,13 +67,13 @@ class Report(models.Model):
         ('other', 'Other'),
     ]
 
-    reported_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reports')
-    article = models.ForeignKey(Article, on_delete=models.CASCADE, null=True, blank=True, related_name='article_reports')
-    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True, blank=True, related_name='comment_reports')
-    reason = models.CharField(max_length=50, choices=REPORT_CHOICES)
-    details = models.TextField(blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    is_resolved = models.BooleanField(default=False)
+    reported_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reports')  # 신고를 한 사용자
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, null=True, blank=True, related_name='article_reports')  # 신고된 게시물
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True, blank=True, related_name='comment_reports')  # 신고된 댓글
+    reason = models.CharField(max_length=50, choices=REPORT_CHOICES)  # 신고 이유 필드. 리스트로 제공
+    details = models.TextField(blank=True)  # 신고에 대한 추가적인 상세 설명
+    created_at = models.DateTimeField(auto_now_add=True)  # 신고가 생성된 시간
+    is_resolved = models.BooleanField(default=False)  # 신고가 처리되었는지 여부
 
     def __str__(self):
         return f"Report by {self.reported_by} on {self.article or self.comment}"
