@@ -9,7 +9,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from django.shortcuts import get_object_or_404, get_list_or_404, render
 
-from .serializers import ArticleListSerializer, ArticleSerializer, CommentSerialzer
+from .serializers import ArticleListSerializer, ArticleSerializer, ArticleSerializer, CommentSerialzer
 from .models import Article, Comment
 from accounts.models import User
 
