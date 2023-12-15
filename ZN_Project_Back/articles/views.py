@@ -134,3 +134,15 @@ def report_article(request, article_pk):
         serializer.save(reported_by=request.user, article=article)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# 댓글 신고 기능
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def report_comment(request, comment_pk):
+    comment = get_object_or_404(Comment, pk=comment_pk)
+    serializer = ReportSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(reported_by=request.user, comment=comment)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
