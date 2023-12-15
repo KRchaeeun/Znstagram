@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Article, Comment, Tag, ArticleLike, CommentLike, Report
 
 
+# 해시태그 시리얼라이져
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
