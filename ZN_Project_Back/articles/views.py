@@ -40,7 +40,7 @@ def articles_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
 def article_detail(request, article_pk):
-    article = get_object_or_404(Article, pk=article_pk)
+    article = get_object_or_404(Article, pk=article_pk)  # 'article_pk'를 'pk=article_pk'로 수정
     if request.method == 'GET':
         serializer = ArticleSerializer(article)
         return Response(serializer.data)
