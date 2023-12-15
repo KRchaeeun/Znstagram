@@ -8,7 +8,7 @@ class Tag(models.Model):
     content = models.CharField(max_length=100, unique=True)  # 태그는 일반적으로 짧으므로 TextField 대신 CharField 사용
 
     def get_articles(self):
-        return self.article_set.all()
+        return self.article_set.all()  # 특정 태그가 있는 게시물 반환. 태그 검색 기능 구현 가능
 
 
 class Article(models.Model):
