@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Comment
+from .models import Article, Comment, Tag
 
 class ArticleListSerializer(serializers.ModelSerializer):
 
