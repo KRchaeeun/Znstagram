@@ -83,7 +83,12 @@ def comment_update(request, comment_pk):
     if not request.user.comment_set.filter(pk=comment_pk).exists():
         return Response({'message': '권한이 없습니다.'})
 
-    comment = get_object_or_404(Comment, pk=comment_pk)
+    
+    elif request.method == 'PUT':
+        serializer = CommentSerializer(comment, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
     
     if request.method == 'DELETE':
         comment.delete()
@@ -91,9 +96,3 @@ def comment_update(request, comment_pk):
             'message': '댓글이 삭제되었습니다.'
         }
         return Response(data=data, status=status.HTTP_204_NO_CONTENT)
-
-    elif request.method == 'PUT':
-        serializer = CommentSerializer(comment, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
