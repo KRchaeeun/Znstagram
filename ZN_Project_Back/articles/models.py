@@ -27,7 +27,7 @@ class Article(models.Model):
     # 4. django-imagekit과 같은 서드 파티 라이브러리 사용
 
     def like_count(self):
-        return self.articlelike_set.count()
+        return self.articlelike_set.count()  # 해당 게시물에 대한 좋아요 수 계산
     
 
 class Comment(models.Model):
