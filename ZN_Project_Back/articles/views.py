@@ -96,3 +96,16 @@ def comment_update(request, comment_pk):
             'message': '댓글이 삭제되었습니다.'
         }
         return Response(data=data, status=status.HTTP_204_NO_CONTENT)
+
+
+# 게시글에 대한 '좋아요' 기능
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def article_like(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    like, created = ArticleLike.objects.get_or_create(user=request.user, article=article)
+    if created:
+        return Response(status=status.HTTP_201_CREATED)
+    else:
+        like.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
