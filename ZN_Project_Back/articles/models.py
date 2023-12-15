@@ -14,7 +14,7 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image = models.ImageField(blank=True, upload_to = 'images/')
-    location = models.CharField(max_length=255, blank=True)
+    location = models.CharField(max_length=255, blank=True)  # 사용자가 포스팅한 위치를 설정할 수 있는 위치 필드 추가
 
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
