@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 
 
+# 해시태그 모델
 class Tag(models.Model):
     # content = models.TextField(unique=True)
     content = models.CharField(max_length=100, unique=True)  # 태그는 일반적으로 짧으므로 TextField 대신 CharField 사용
