@@ -11,6 +11,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 # 전체 게시글 시리얼라이져
 class ArticleListSerializer(serializers.ModelSerializer):
+    like_count = serializers.SerializerMethodField()
 
     class Meta:
         model = Article
