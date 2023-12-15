@@ -109,3 +109,16 @@ def article_like(request, article_pk):
     else:
         like.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
+# 댓글에 대한 '좋아요' 기능
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def comment_like(request, comment_pk):
+    comment = get_object_or_404(Comment, pk=comment_pk)
+    like, created = CommentLike.objects.get_or_create(user=request.user, comment=comment)
+    if created:
+        return Response(status=status.HTTP_201_CREATED)
+    else:
+        like.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
