@@ -80,10 +80,10 @@ def comment_create(request, article_pk):
 @api_view(['PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
 def comment_update(request, comment_pk):
-    if not request.user.comment_set.filter(pk=comment_pk).exists():
-        return Response({'message': '권한이 없습니다.'})
+    comment = get_object_or_404(Comment, pk=comment_pk)
+    if request.user != comment.user:
+        return Response({'message': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
 
-    
     elif request.method == 'PUT':
         serializer = CommentSerializer(comment, data=request.data)
         if serializer.is_valid(raise_exception=True):
