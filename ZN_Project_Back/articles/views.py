@@ -16,7 +16,7 @@ from .serializers import (ArticleListSerializer,
                           ArticleLikeSerializer, 
                           CommentLikeSerializer, 
                           ReportSerializer)
-from .models import Article, Comment
+from .models import Article, Comment, ArticleLike
 from accounts.models import User
 
 
