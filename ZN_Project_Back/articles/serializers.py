@@ -16,6 +16,12 @@ class ArticleLikeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class CommentLikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommentLike
+        fields = '__all__'
+
+
 # 전체 게시글 시리얼라이져
 class ArticleListSerializer(serializers.ModelSerializer):
     like_count = serializers.SerializerMethodField()  # 좋아요 수를 나타내는 필드 추가
