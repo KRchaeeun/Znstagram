@@ -23,6 +23,7 @@ class CommentLikeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# 게시글 신고 시리얼라이져
 class ReportSerializer(serializers.ModelSerializer):
     class Meta:
         model = Report
