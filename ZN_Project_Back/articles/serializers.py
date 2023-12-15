@@ -21,6 +21,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
         return obj.like_count()  
 
 
+# 댓글 시리얼라이져
 class CommentSerialzer(serializers.ModelSerializer):
     
     class Meta:
