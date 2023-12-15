@@ -45,6 +45,12 @@ def article_detail(request, article_pk):
         serializer = ArticleSerializer(article)
         return Response(serializer.data)
     
+    elif request.method == 'PUT':
+        serializer = ArticleSerializer(article, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+        
     elif request.method == 'DELETE':
         article.delete()
         data = {
@@ -52,11 +58,6 @@ def article_detail(request, article_pk):
         }
         return Response(data=data, status=status.HTTP_204_NO_CONTENT)
 
-    elif request.method == 'PUT':
-        serializer = ArticleSerializer(article, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
 
 
 
