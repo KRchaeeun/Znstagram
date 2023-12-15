@@ -4,7 +4,7 @@ from django.conf import settings
 # Create your models here.
 
 class Tag(models.Model):
-    content = models.TextField(unique=True)
+    # content = models.TextField(unique=True)
 
 class Article(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
