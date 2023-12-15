@@ -41,4 +41,4 @@ class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = '__all__'
-        read_only_fields = ('user')
+        read_only_fields = ('user')  # 위에 tags는 별도의 TagSerializer로 처리하므로 삭제
