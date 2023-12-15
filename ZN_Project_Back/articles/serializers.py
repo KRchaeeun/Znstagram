@@ -16,6 +16,7 @@ class ArticleLikeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# 댓글 좋아요 시리얼라이져
 class CommentLikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = CommentLike
