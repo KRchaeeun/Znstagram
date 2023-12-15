@@ -9,6 +9,7 @@ class TagSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# 게시글 좋아요 시리얼라이져
 class ArticleLikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ArticleLike
