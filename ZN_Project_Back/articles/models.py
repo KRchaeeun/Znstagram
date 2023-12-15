@@ -64,6 +64,7 @@ class CommentLike(models.Model):
         unique_together = ('user', 'comment')  # 동일 사용자가 동일 댓글에 중복 좋아요 방지
 
 
+# 게시글 신고 모델
 class Report(models.Model):
     REPORT_CHOICES = [
         ('spam', 'Spam'),
