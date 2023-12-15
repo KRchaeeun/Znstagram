@@ -33,7 +33,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class ArticleSerializer(serializers.ModelSerializer):
 
-    comment_set = CommentSerialzer(many=True, read_only=True)
+    comment_set = CommentSerializer(many=True, read_only=True)
 
     class Meta:
         model = Article
