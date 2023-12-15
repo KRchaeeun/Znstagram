@@ -21,7 +21,6 @@ class CustomRegisterSerializer(RegisterSerializer):
             'password1': self.validated_data.get('password1', ''),
             'nickname': self.validated_data.get('nickname', ''),
             'age': self.validated_data.get('age', ''),
-            'financial_products': self.validated_data.get('financial_products', ''),
             # 'followings' : self.validated_data.get('followings', '')
         }
 
