@@ -26,17 +26,16 @@ function Signup() {
     userPhoto: "",
   };
 
-  const [form, handleFormChange, handleFileChange, resetForm] =
+  const [form, handleFormChange, handleFileChange] =
     useForm(initialState);
   const { email, password, name, nickname, userPhoto } = form;
 
   // 이미지 URL 리더 Hook
   const [imageUrl, fileReader] = useFileReader();
 
-  const [userInputNum, handleUserInputNumChange, resetUserInput] = useInput("");
-  const [emailVerifyNum, setEmailVerifyNum] = useState("");
-  const [isSendEmail, setIsSendEmail] = useState(false);
-  const [emailChecking, setEmailChecking] = useState(false);
+  const [userInputNum, handleUserInputNumChange] = useInput("");
+  const [isSendEmail] = useState(false);
+  const [emailChecking] = useState(false);
 
   const emailRegex =
   /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
