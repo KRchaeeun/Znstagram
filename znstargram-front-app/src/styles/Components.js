@@ -44,3 +44,53 @@ export const StLinkCon = styled.div`
     font-weight: bold;
   }
 `;
+
+export const StEmailChecking = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 20%;
+    margin: 0;
+  }
+`;
+
+export const StImageUpload = styled.div`
+  padding: 5%;
+  margin-bottom: 3%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: ${Colors.shadow};
+
+  input {
+    padding-top: 3%;
+  }
+`;
+
+export const StLabel = styled.label`
+  font-size: 0.9rem;
+  padding: 1% 0;
+`;
+
+export const StProfile = styled.div`
+  width: 100px;
+  line-height: 100px;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #ccc;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: ${Colors.shadow2};
+  background: ${(props) => `url(${props.image}) no-repeat 50% /cover`};
+`;
