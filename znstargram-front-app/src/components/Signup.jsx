@@ -30,7 +30,6 @@ function Signup() {
     useForm(initialState);
   const { email, password, name, nickname, userPhoto } = form;
 
-  // 이미지 URL 리더 Hook
   const [imageUrl, fileReader] = useFileReader();
 
   const [userInputNum, handleUserInputNumChange] = useInput("");
@@ -49,7 +48,6 @@ function Signup() {
     }
   }, [email]);
 
-  // 패스워드 에러메세지
   const passwordMessage = useMemo(() => {
     if (password && !passwordRegex.test(password)) {
       return "비밀번호는 영문, 숫자 포함 8자리 이상입니다.";
