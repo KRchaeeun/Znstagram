@@ -4,7 +4,7 @@
 2. 김보경 - [github] [aishahansten](https://github.com/aishahansten)
 3. 이채은 - [github] [KRchaeeun](https://github.com/KRchaeeun)  
 4. 임지현 - [github] [ljh2375](https://github.com/ljh2375)
-5. 차현철 - [github] [chahyeoncheol](https://github.com/bright-cha)
+5. 차현철 - [github] [bright-cha](https://github.com/bright-cha)
   
 ## Commit Rules  
 - [INIT]: 프로젝트 시작 시 초기 설정
